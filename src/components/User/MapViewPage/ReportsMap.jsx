@@ -59,10 +59,10 @@ function ReportsMap(){
       const showTickets = tickets.filter(ticket => {
         console.log('ticket', ticket, bounds)
       return(
-        ticket?.latitude < bounds?.Ua.hi && 
-        ticket?.latitude > bounds?.Ua.lo && 
-        ticket?.longitude < bounds?.Ia.hi && 
-        ticket?.longitude > bounds?.Ia.lo
+        ticket?.latitude < bounds?.Va.hi && 
+        ticket?.latitude > bounds?.Va.lo && 
+        ticket?.longitude < bounds?.Ga.hi && 
+        ticket?.longitude > bounds?.Ga.lo
       )})
       dispatch({type: 'SET_INBOUNDSMARKERS', payload: showTickets});
       }
